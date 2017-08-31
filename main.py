@@ -23,14 +23,14 @@ while True:
 				for photo in post['photos']:
 					try:
 						print photo['original_size']['url']
-						urllib.urlretrieve(photo['original_size']['url'],'/Users/iseliget/Pictures/tumblrFav/'+ str(random.randint(1,1000)) + photo['original_size']['url'].split('/')[-1])
+						urllib.urlretrieve(photo['original_size']['url'],'/Users/me/Pictures/tumFav/'+ str(random.randint(1,1000)) + photo['original_size']['url'].split('/')[-1])
 					except urllib.ContentTooShortError:
 						print("DID NOT DOWNLOAD: " + str(photo['original_size']['url']))
 
 			elif 'video_url' in post:
 				try:
 					print post['video_url']
-					urllib.urlretrieve(post['video_url'],'/Users/iseliget/Pictures/tumblrFav/'+ str(random.randint(1,1000)) + post['video_url'].split('/')[-1])
+					urllib.urlretrieve(post['video_url'],'/Users/me/Pictures/tumFav/'+ str(random.randint(1,1000)) + post['video_url'].split('/')[-1])
 				except urllib.ContentTooShortError:
 					print("DID NOT DOWNLOAD: " + str(post['video_url']))
 	else:
